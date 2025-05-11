@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulangan Harian - Sejarah</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-section">
+    <h2>Identitas Siswa</h2>
+    <label>Nama: <input type="text" id="nama" required></label><br><br>
+    <label>Kelas: <input type="text" id="kelas" required></label><br><br>
+    <button onclick="startExam()">Mulai Ulangan</button>
+  </div>
+
+  <div id="exam-section" class="hidden">
+    <h2>Ulangan Harian - Sejarah</h2>
+    <p><strong>Nama:</strong> <span id="display-nama"></span></p>
+    <p><strong>Kelas:</strong> <span id="display-kelas"></span></p>
+    <form id="quiz-form">
+      <!-- Soal 1 -->
+      <div>
+        <p>1. Restorasi Meiji di Jepang telah mengubah berbagai sektor kehidupan. Berikut ini yang termasuk bidang garapan utama dalam Restorasi Meiji adalah …</p>
+        <label><input type="radio" name="q1" value="a"> A. Penghapusan sistem kasta dan perluasan wilayah kekuasaan</label><br>
+        <label><input type="radio" name="q1" value="b"> B. Pemberlakuan sistem pertanian feodal dan peralihan ke sistem barter</label><br>
+        <label><input type="radio" name="q1" value="c"> C. Modernisasi militer, sistem pendidikan, dan pembangunan industri</label><br>
+        <label><input type="radio" name="q1" value="d"> D. Penutupan Jepang dari dunia luar dan pelarangan perdagangan internasional</label><br>
+        <label><input type="radio" name="q1" value="e"> E. Pelestarian sistem samurai sebagai pilar utama negara</label><br>
+      </div><br>
+
+      <!-- Soal 2 -->
+      <div>
+        <p>2. Tujuan utama Jepang melakukan aktivitas spionase sebelum menduduki Hindia Belanda adalah …</p>
+        <label><input type="radio" name="q2" value="a"> A. Menyebarkan budaya Jepang kepada masyarakat Indonesia</label><br>
+        <label><input type="radio" name="q2" value="b"> B. Mempromosikan perdagangan Jepang di Asia Tenggara</label><br>
+        <label><input type="radio" name="q2" value="c"> C. Mengidentifikasi potensi kekayaan alam dan strategi militer Belanda</label><br>
+        <label><input type="radio" name="q2" value="d"> D. Melakukan pertukaran budaya dengan tokoh-tokoh lokal</label><br>
+        <label><input type="radio" name="q2" value="e"> E. Menjalin hubungan diplomatik resmi dengan pemerintah Hindia Belanda</label><br>
+      </div><br>
+
+      <!-- Soal 3 -->
+      <div>
+        <p>3. Lagu Indonesia Raya diperbolehkan dinyanyikan bersama lagu Kimigayo mencerminkan strategi Jepang untuk …</p>
+        <label><input type="radio" name="q3" value="a"> A. Menghindari kecaman dari negara Barat</label><br>
+        <label><input type="radio" name="q3" value="b"> B. Mengakui kedaulatan bangsa Indonesia secara resmi</label><br>
+        <label><input type="radio" name="q3" value="c"> C. Mendapatkan dukungan rakyat Indonesia melalui pendekatan emosional</label><br>
+        <label><input type="radio" name="q3" value="d"> D. Menyembunyikan tujuan kolonialisme Jepang</label><br>
+        <label><input type="radio" name="q3" value="e"> E. Mempersiapkan Indonesia menjadi negara sekutu Jepang</label><br>
+      </div><br>
+
+      <!-- Soal 4 -->
+      <div>
+        <p>4. Tujuan pembentukan organisasi militer PETA oleh Jepang adalah …</p>
+        <label><input type="radio" name="q4" value="a"> A. Menyediakan pelatihan militer bagi rakyat Indonesia</label><br>
+        <label><input type="radio" name="q4" value="b"> B. Memfasilitasi kemerdekaan Indonesia secara langsung</label><br>
+        <label><input type="radio" name="q4" value="c"> C. Membentuk tentara nasional Indonesia pasca-kemerdekaan</label><br>
+        <label><input type="radio" name="q4" value="d"> D. Menggunakan tenaga lokal untuk membantu Jepang menghadapi Sekutu</label><br>
+        <label><input type="radio" name="q4" value="e"> E. Menghindari konflik bersenjata antara Jepang dan Belanda</label><br>
+      </div><br>
+
+      <!-- Soal 5 -->
+      <div>
+        <p>5. Manfaat utama kerja sama tokoh Indonesia dengan Jepang adalah …</p>
+        <label><input type="radio" name="q5" value="a"> A. Mempercepat kemerdekaan Indonesia melalui dukungan Jepang</label><br>
+        <label><input type="radio" name="q5" value="b"> B. Menghindari konflik antara Jepang dan Indonesia</label><br>
+        <label><input type="radio" name="q5" value="c"> C. Mempermudah akses ke kekayaan alam Indonesia</label><br>
+        <label><input type="radio" name="q5" value="d"> D. Meningkatkan hubungan dagang antar negara</label><br>
+        <label><input type="radio" name="q5" value="e"> E. Mengamankan posisi Sukarno sebagai presiden</label><br>
+      </div><br>
+
+      <!-- Soal 6 -->
+      <div>
+        <p>6. Tujuan utama Jepang mengundang Soekarno, Hatta, dan Radjiman ke Dalat adalah …</p>
+        <label><input type="radio" name="q6" value="a"> A. Menyerahkan kekuasaan Jepang kepada Indonesia</label><br>
+        <label><input type="radio" name="q6" value="b"> B. Menawarkan kerja sama dagang dan industri</label><br>
+        <label><input type="radio" name="q6" value="c"> C. Menunjukkan kesiapan Jepang memberikan kemerdekaan</label><br>
+        <label><input type="radio" name="q6" value="d"> D. Mengadili ketiganya karena dianggap pemberontak</label><br>
+        <label><input type="radio" name="q6" value="e"> E. Memberikan penghargaan atas kerja sama mereka selama perang</label><br>
+      </div><br>
+
+      <!-- Soal 7 -->
+      <div>
+        <p>7. Contoh perlawanan rakyat terhadap pendudukan Jepang adalah …</p>
+        <label><input type="radio" name="q7" value="a"> A. Perjanjian Renville dan Konferensi Meja Bundar</label><br>
+        <label><input type="radio" name="q7" value="b"> B. Serangan Umum 1 Maret 1949</label><br>
+        <label><input type="radio" name="q7" value="c"> C. Pemberontakan PETA di Blitar dan Gerakan bawah tanah di Sumatera</label><br>
+        <label><input type="radio" name="q7" value="d"> D. Perang Diponegoro melawan Belanda</label><br>
+        <label><input type="radio" name="q7" value="e"> E. Kongres Pemuda II</label><br>
+      </div><br>
+
+      <!-- Soal 8 -->
+      <div>
+        <p>8. Kelompok bawah tanah yang melawan Jepang secara rahasia adalah …</p>
+        <label><input type="radio" name="q8" value="a"> A. Putera dan Keibodan</label><br>
+        <label><input type="radio" name="q8" value="b"> B. TKR dan BKR</label><br>
+        <label><input type="radio" name="q8" value="c"> C. GAPI dan BPUPKI</label><br>
+        <label><input type="radio" name="q8" value="d"> D. Gerakan pemuda di Jakarta dan kelompok Sutan Sjahrir</label><br>
+        <label><input type="radio" name="q8" value="e"> E. Sarekat Dagang Islam dan Muhammadiyah</label><br>
+      </div><br>
+
+      <!-- Soal 9 -->
+      <div>
+        <p>9. Setelah menganalisis kebijakan Jepang di Indonesia, apakah penjajahan Jepang lebih membawa penderitaan atau justru memberi sumbangsih bagi kemerdekaan Indonesia? Jelaskan!</p>
+        <textarea name="q9" rows="5" cols="80" required></textarea>
+      </div><br>
+
+      <!-- Soal 10 -->
+      <div>
+        <p>10. Berdasarkan teks sejarah yang diberikan, analisis apakah kerja sama para tokoh nasional Indonesia dengan Jepang merupakan pengkhianatan atau strategi perjuangan. Gunakan bukti sosial, pemerintahan, pendidikan, dan organisasi!</p>
+        <textarea name="q10" rows="5" cols="80" required></textarea>
+      </div><br>
+
+      <button type="submit">Kumpulkan Jawaban</button>
+    </form>
+  </div>
+
+  <div id="blocked-section" class="hidden">
+    <h2>Ulangan Selesai</h2>
+    <p>Anda keluar dari halaman atau tab. Ulangan otomatis dihentikan.</p>
+  </div>
+
+  <script>
+    let examStarted = false;
+    let examEnded = false;
+
+    function startExam() {
+      const nama = document.getElementById("nama").value.trim();
+      const kelas = document.getElementById("kelas").value.trim();
+      if (nama === "" || kelas === "") {
+        alert("Silakan isi nama dan kelas terlebih dahulu.");
+        return;
+      }
+      document.getElementById("display-nama").textContent = nama;
+      document.getElementById("display-kelas").textContent = kelas;
+      document.getElementById("login-section").classList.add("hidden");
+      document.getElementById("exam-section").classList.remove("hidden");
+      examStarted = true;
+    }
+
+    function endExam() {
+      if (examEnded) return;
+      examEnded = true;
+      document.getElementById("exam-section").classList.add("hidden");
+      document.getElementById("blocked-section").classList.remove("hidden");
+    }
+
+    document.addEventListener("visibilitychange", () => {
+      if (examStarted && document.hidden) {
+        endExam();
+      }
+    });
+
+    window.onbeforeunload = function () {
+      if (examStarted && !examEnded) {
+        return "Ulangan sedang berlangsung. Keluar akan menghentikan ujian.";
+      }
+    };
+
+    document.getElementById("quiz-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Jawaban telah dikumpulkan. Terima kasih!");
+      endExam();
+    });
+  </script>
+</body>
+</html>
